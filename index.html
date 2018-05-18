@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slider</title>
+
+    <!--jquery-->
+    <script src="lib/jquery.js"></script>
+
+    <!--fonts-->
+    <script src="lib/fonts/fontawesome-all.min.js"></script>
+
+
+    <!--slider-->
+    <link rel="stylesheet" href="lib/slider/css/slider.css">
+    <script src="lib/slider/js/library/jquery.mobile.js"></script>
+    <script src="lib/slider/js/slider.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container">
+
+    <nav class="menu">
+        <div class="right-menu">
+            <ul>
+                <li><a href="#">خانه</a></li>
+                <li><a href="#">پروژه ها</a></li>
+                <li><a href="#">سفارش</a></li>
+                <li><a href="#">درباره ی ما</a></li>
+                <li><span><label for="search" class="icon-search"><i class="fas fa-search"></i></label><input
+                        type="search" placeholder="جستجو کنید" id="search"/></span></li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="left-menu">
+            <h1 class="logo"> &lt<span class="red">D</span>STARG /&gt</h1>
+            <div class="socials">
+                <ul>
+                    <li class="google"><i class="fab fa-google"></i></li>
+                    <li class="twitter"><i class="fab fa-twitter"></i></li>
+
+                    <li class="linkedin"><i class="fab fa-linkedin-in"></i></li>
+                    <li class="instagram"><i class="fab fa-instagram"></i></li>
+                    <li class="telegram"><i class="fab fa-telegram-plane"></i></li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </nav>
+    <div class="slider-content">
+        <div class="slider">
+            <ul>
+                <li data-title="image 1"><a href="#"><img src="assets/images/sld1.jpg" alt="img1"></a></li>
+                <li data-title="image 2"><a href="#"><img src="assets/images/sld2.jpg" alt="img1"></a></li>
+                <li data-title="image 3"><a href="#"><img src="assets/images/sld3.jpg" alt="img1"></a></li>
+                <li data-title="image 4"><a href="#"><img src="assets/images/sld4.jpg" alt="img1"></a></li>
+                <li data-title="image 5"><a href="#"><img src="assets/images/sld5.jpg" alt="img1"></a></li>
+
+            </ul>
+        </div>
+
+        <div class="bottom">
+            <span>&lt</span>
+            <span>&lt</span>
+            <span>&lt</span>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $().slider({
+        timeSlideOut: 9000,
+        counter: false,
+        caption: true,
+        nextAndPrevios: true,
+        animateIn: "random",
+        animateOut: "random",
+        controler: true,
+        speed: 750,
+        touch: true,
+        timer: true,
+        sort: "A",
+        pauseHover: false,
+        autoSlide: true,
+        zoomHover: false,
+        disableLinkImage: true
+    });
+</script>
+</body>
+</html>

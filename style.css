@@ -1,0 +1,316 @@
+@font-face {
+    font-family: B nazanin;
+    src: url("lib/fonts/BNAZANIN_0.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    background: #ddd;
+    direction: rtl;
+    font-size: 0.6rem;
+}
+
+.container {
+    z-index: 2000;
+    position: relative;
+    max-width: 2800px;
+    min-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    /*border: 5px solid #ddd;*/
+    box-shadow: 40px 40px 100px 2px #3f3f3f;
+}
+
+nav.menu {
+    background: linear-gradient(to top, transparent 00%, #eee 150%);
+    height: 60px;
+    font-size: 3em;
+    display: inline-block;
+    width: 100%;
+    max-width: 2800px;
+
+    font-family: 'B nazanin';
+    min-width: 1200px;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+nav.menu .right-menu {
+    float: right;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+nav.menu .right-menu ul > li:not(:last-of-type) {
+
+    width: 20%;
+    height: 60px;
+    float: right;
+    max-width: 120px;
+
+    text-align: center;
+}
+
+nav.menu .right-menu ul > li > a {
+
+    color: #fff;
+    width: 100%;
+    padding: 30px 0;
+    line-height: 2em;
+
+    text-shadow: 1px 1px 3px #000;
+
+}
+
+nav.menu .right-menu ul > li > a:hover {
+    color: #5dd3d2;
+    text-shadow: 2px 2px 3px #000;
+}
+
+nav.menu .right-menu ul > li > span {
+    width: 500px;
+    position: relative;
+    display: inline-block;
+    padding-right: 25px;
+    height: 60px;
+    line-height: 60px;
+}
+
+nav.menu .right-menu ul > li > span > label {
+    cursor: pointer;
+    vertical-align: -2px;
+}
+
+nav.menu .right-menu ul > li > span > input {
+
+    font-family: 'B nazanin';
+    width: 0;
+    opacity: 0;
+    background: rgba(50, 50, 50, 0.3);
+    margin-right: 15px;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 5px 6px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    transition: width 0.4s ease-out, opacity 0.5s ease-out;
+}
+
+nav.menu .right-menu ul > li > span > label:hover ~ input,
+nav.menu .right-menu ul > li > span > input:focus,
+nav.menu .right-menu ul > li > span > input:hover {
+    opacity: 1;
+    width: 280px;
+
+}
+
+nav.menu .right-menu ul > li > span > label:hover {
+    color: #295f8f;
+}
+
+nav.menu .left-menu {
+    float: left;
+    height: 100%;
+    margin-left: 30px;
+    position: relative;
+    direction: ltr;
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+
+.logo {
+    letter-spacing: initial;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    z-index: 2;
+    font-size: 2em;
+    cursor: pointer;
+
+    text-shadow: none;
+    transition: text-shadow 0.3s, letter-spacing 0.3s ease-out;
+}
+
+span.red {
+    color: #de0000;
+}
+
+.logo:hover {
+    letter-spacing: 0.03em;
+    text-shadow: 3px 3px 6px #000;
+}
+
+.socials {
+    position: absolute;
+
+    background: linear-gradient(to top, #eee -150%, transparent 110%);
+    border-radius: 2px 2px 20px 20px;
+
+    left: -30px;
+    /*width: 100%;*/
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    top: 100%;
+    transform: translate(0, 10%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in, transform 0.6s ease-in;
+}
+
+.socials::after {
+    content: '';
+
+    border-bottom: 10px solid rgba(241, 241, 241, 0.4);
+    border-right: 7.5px solid transparent;
+    border-left: 7.5px solid transparent;
+    position: absolute;
+    bottom: 100%;
+    left: calc(0% + 30px);
+}
+
+.logo:hover ~ .socials, .socials:hover {
+
+    pointer-events: auto;
+    opacity: 1;
+    transform: translate(0, 0);
+
+    border-radius: 2px 2px 20px 20px;
+    transition: opacity 0.7s ease-in, transform 0.4s ease-in;
+}
+
+nav.menu .left-menu ul {
+    display: inline-block;
+}
+
+nav.menu .left-menu ul > li {
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset;
+    border: 2px solid #ddd;
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    float: left;
+    border-radius: 20px;
+}
+
+nav.menu .left-menu ul > li:hover {
+    cursor: pointer;
+}
+
+nav.menu .left-menu ul > li.google:hover {
+    color: #338442;
+    background: #23ff7e;
+    border-color: #198542;
+}
+
+nav.menu .left-menu ul > li.twitter:hover {
+    color: #426fbe;
+    background: #62caff;
+    border-color: #3a7897;
+}
+
+nav.menu .left-menu ul > li.linkedin:hover {
+    background: #ff6e78;
+    color: #850a16;
+
+    border-color: #ca2f28;
+}
+
+nav.menu .left-menu ul > li.instagram:hover {
+    color: #b2683c;
+    background: #ffed67;
+    border-color: #8d8339;
+}
+
+nav.menu .left-menu ul > li.telegram:hover {
+    color: #4e7dff;
+    background: #b3fffd;
+    border-color: #679291;
+}
+
+div.bottom {
+    font-size: 2vw;
+    z-index: 555;
+    background: red;
+    cursor: pointer;
+    color: #215280;
+    position: absolute;
+    bottom: 6%;
+    left: calc(50% - 2vw);
+    transform: rotate(-90deg) scale(1.0, 2);
+}
+
+div.bottom span {
+    text-shadow: 0px 0px 2px #a4d5f6;
+    font-weight: bold;
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    animation: bot 2s ease-in infinite;
+}
+
+div.bottom span:nth-of-type(3) {
+    /*color:red;*/
+    animation-delay: 0s;
+}
+
+div.bottom span:nth-of-type(2) {
+    /*color:green;*/
+    animation-delay: 0.6s;
+}
+
+div.bottom span:nth-of-type(1) {
+    animation-delay: 1.2s;
+    /*color:blue;*/
+}
+
+@keyframes bot {
+    10% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-150%, 0)
+    }
+}
+
+.slider-content {
+    position: relative;
+    direction: ltr;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.slider ul li img {
+    object-fit: cover;
+}
